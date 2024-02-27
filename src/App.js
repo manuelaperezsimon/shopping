@@ -1,7 +1,14 @@
+import React from "react";
+import ProductList from "./components/ProductsList/ProductsList";
+import productsData from "../src/mocks/products.json";
+import Header from "./components/Header/Header";
+
 function App() {
+  const { products } = productsData;
   return (
     <div className="App">
-      <h1>Shopping Cart</h1>
+      <Header />
+      <ProductList products={products} />
     </div>
   );
 }
