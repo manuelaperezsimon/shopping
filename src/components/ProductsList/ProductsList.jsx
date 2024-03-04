@@ -1,5 +1,4 @@
 import React from "react";
-
 import { AddToCartIcon } from "../icons/Icons";
 
 const ProductList = ({ products }) => {
@@ -9,11 +8,11 @@ const ProductList = ({ products }) => {
         {products.map((product) => (
           <li
             key={product.id}
-            className="bg-white rounded-md shadow-lg sm:shadow-gray-200/50 mt-8"
+            className="bg-white rounded-md shadow-lg sm:shadow-gray-200/50 mt-8 h-full"
           >
             <div className="flex flex-col h-full">
               <img
-                className="w-full h-40 object-cover"
+                className="w-full h-40 object-scale-down mb-6"
                 src={product.thumbnail}
                 alt={product.title}
               />
@@ -25,12 +24,12 @@ const ProductList = ({ products }) => {
                   <p className="text-sm text-gray-700 mb-4">
                     {product.description}
                   </p>
-                  <p className="text-sm text-gray-900 mb-6">
+                </div>
+                <div className="mt-auto">
+                  <p className="text-sm text-gray-900">
                     <strong>Price:</strong> € {product.price}
                   </p>
-                </div>
-                <div className="flex items-center justify-start">
-                  <button className="flex items-center px-3 py-2 gap-4 border text-sm font-semibold text-black rounded-md hover:bg-black-600 focus:bg-black-600 focus:outline-none focus:ring focus:ring-black-300">
+                  <button className="flex items-center mt-2 px-3 py-2 gap-4 border text-sm font-semibold text-black rounded-md hover:bg-black-600 focus:bg-black-600 focus:outline-none focus:ring focus:ring-black-300">
                     <AddToCartIcon className="w-4 h-4 mr-1" />
                     Add to Cart
                   </button>
