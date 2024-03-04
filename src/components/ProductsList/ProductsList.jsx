@@ -9,7 +9,7 @@ const ProductList = ({ products }) => {
         {products.map((product) => (
           <li
             key={product.id}
-            className="bg-white rounded-md shadow-lg sm:shadow-gray-200/50"
+            className="bg-white rounded-md shadow-lg sm:shadow-gray-200/50 mt-8"
           >
             <div className="flex flex-col h-full">
               <img
@@ -25,7 +25,7 @@ const ProductList = ({ products }) => {
                   <p className="text-sm text-gray-700 mb-4">
                     {product.description}
                   </p>
-                  <p className="text-sm text-gray-900">
+                  <p className="text-sm text-gray-900 mb-6">
                     <strong>Price:</strong> € {product.price}
                   </p>
                 </div>
