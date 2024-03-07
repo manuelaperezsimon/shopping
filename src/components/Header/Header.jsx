@@ -1,5 +1,5 @@
 import React from "react";
-import { CartIcon } from "../icons/Icons";
+import { Cart } from "../Cart/Cart";
 
 const Header = () => {
   return (
@@ -11,12 +11,14 @@ const Header = () => {
           </h1>
         </div>
         <div className="flex items-center">
-          <a href="#" className="text-m font-semibold leading-6 text-gray-900">
+          <div
+            href="#"
+            className="text-m font-semibold leading-6 text-gray-900"
+          >
             <div className="flex items-center gap-2">
-              <CartIcon />
-              <span>1</span>
+              <Cart />
             </div>
-          </a>
+          </div>
         </div>
       </nav>
     </header>
